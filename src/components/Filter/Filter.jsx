@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import css from './Filter.module.css';
 
@@ -26,8 +26,8 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-  filter: propTypes.string.isRequired,
-  onFilter: propTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+  onFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;

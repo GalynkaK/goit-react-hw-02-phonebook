@@ -31,7 +31,8 @@ class App extends Component {
     }
   };
 
-  filterContacts(filter) {
+
+  filterContacts = filter => {
     this.setState({ filter });
   };
 
@@ -64,7 +65,7 @@ class App extends Component {
           <h1>Phonebook</h1>
           <Form onSubmit={this.handleSubmit} />
           <h2>Contacts</h2>
-          <Filter filter={filter} onFilter={this.filterContacts} />
+          <Filter filter={filter} onFilter={this.filterContacts.bind(this)} />
           <ContactList
             contacts={filteredContacts}
             onDeleteContact={this.handleDelete}
